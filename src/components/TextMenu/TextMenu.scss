@@ -1,18 +1,32 @@
-// Nav2.scss
-.nav2 {
+.header__nav-text {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  background-color: #444;
+  opacity: 1;
 
   a {
+    position: relative;
     color: #fff;
     text-decoration: none;
-    padding: 10px;
+    margin: 0 40px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background-color: white;
+      transition: width 0.25s ease-in-out;
+      transform: translateX(-50%);
+    }
 
     &:hover {
-      color: #61dafb;
-      text-decoration: underline;
+      &::before {
+        width: 100%;
+      }
     }
   }
 }
