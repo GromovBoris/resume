@@ -1,0 +1,84 @@
+{
+  "En": {
+    "header": {
+      "items": [
+        {
+          "about": "about me",
+          "experience": "experience",
+          "education": "education",
+          "code": "code examples",
+          "skills": "skills"
+        }
+      ]
+    },
+    "introduction": {
+      "items": [
+        {
+          "name": "Boris Gromov,",
+          "resume": "a frontend developer."
+        }
+      ]
+    },
+    "about": {
+      "content": "Development experience with the HTML/CSS/Javascript stack, using the Bootstrap library. Development in React/NextJS/Typescript. I strive to write understandable and maintainable code, use the BEM methodology, follow SOLID/DRY and observe uniformity in class names. I combine adaptive and flexible layout, use Flex and Grid technologies, and work with audio and video files."
+    },
+    "experience": {
+      "items": [
+        {
+          "name": "IT-Incubator",
+          "position": "Frontend developer",
+          "description": "Learning React, NextJS, Typescript, Redux, Docker, practical training."
+        },
+        {
+          "name": "RS School",
+          "position": "Frontend developer",
+          "description": "Writing multiple applications during training and practice. Implementation of slider, carousel, input forms, pop-ups and prompts, pagination, navigation, checkboxes and switches, changing interface languages."
+        },
+        {
+          "name": "InsBro",
+          "position": "Project manager",
+          "description": "Budgeting, planning, analytics. Opening and development of a network of retail insurance product sales points. Conducting tenders for legal entities. Interaction with insurance companies. Implementation of a project for the online sale of policies."
+        }
+      ]
+    },
+    "education": {
+      "items": [
+        {
+          "name": "IT-Incubator",
+          "description": "Learning React, NextJS, Typescript, Redux, Docker, GraphQL API."
+        },
+        {
+          "name": "RS School",
+          "description": "Learning HTML/CSS, Javascript, Webpack, RESTful API, Github, practical training."
+        },
+        {
+          "name": "Moscow State University of Economics, Statistics and Informatics",
+          "description": "Corporate information systems, applied informatics in economics, specialist."
+        }
+      ]
+    },
+    "skills": {
+      "personal": [
+        "Team player",
+        "Conscientious",
+        "Attentive to details",
+        "Fast learner",
+        "Reliable",
+        "Self-disciplined"
+      ],
+      "professional": [
+        "English B2",
+        "Javascript/Typescript",
+        "CSS/SCSS",
+        "Git",
+        "Figma",
+        "WebPack",
+        "React/NextJS",
+        "RESTful/GraphQL API",
+        "Redux",
+        "Docker",
+        "Jira"
+      ]
+    }
+  }
+}

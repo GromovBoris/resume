@@ -1,0 +1,17 @@
+// Nav1.scss
+.nav1 {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+
+    &:hover {
+      background-color: #61dafb;
+      border-radius: 5px;
+    }
+  }
+}

@@ -1,0 +1,90 @@
+// Header.scss
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  // padding: 10px 20px;
+  background-image: url(../../assets/backgrounds/header.png);
+  background-size: cover;
+  color: white;
+  transition: all 0.3s ease;
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px #fff;
+      object-fit: cover;
+    }
+  }
+
+  &.collapsed {
+    padding: 10px;
+
+    &__nav {
+      display: flex;
+      align-items: center;
+
+      // Стили для навигации
+      .icon-menu,
+      .text-menu {
+        margin: 0 10px; // Отступы между элементами меню
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+          color: #61dafb; // Цвет при наведении
+        }
+      }
+    }
+
+    &__lang {
+      .header__lang-toggle {
+        position: relative;
+        display: inline-block;
+
+        input[type="checkbox"] {
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #ccc;
+          transition: 0.4s;
+
+          &::before {
+            position: absolute;
+            content: "";
+            height: 26px; // Высота переключателя
+            width: 26px; // Ширина переключателя
+            left: 4px; // Отступ слева
+            bottom: 4px; // Отступ снизу
+            background-color: white;
+            transition: 0.4s;
+          }
+        }
+
+        input:checked + .slider {
+          background-color: #2196f3; // Цвет при активном состоянии
+        }
+
+        input:checked + .slider::before {
+          transform: translateX(26px);
+        }
+      }
+    }
+  }
+}

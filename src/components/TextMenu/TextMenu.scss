@@ -1,0 +1,18 @@
+// Nav2.scss
+.nav2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #444;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+
+    &:hover {
+      color: #61dafb;
+      text-decoration: underline;
+    }
+  }
+}
