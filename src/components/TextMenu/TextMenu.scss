@@ -10,6 +10,7 @@
     color: #fff;
     text-decoration: none;
     margin: 0 40px;
+    opacity: 0;
 
     &::before {
       content: "";
@@ -28,5 +29,18 @@
         width: 100%;
       }
     }
+
+    &.dissolve {
+      animation: dissolve 0.5s forwards;
+    }
+  }
+}
+
+@keyframes dissolve {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

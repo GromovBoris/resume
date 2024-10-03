@@ -1,0 +1,166 @@
+{
+  "En": {
+    "header": {
+      "items": [
+        {
+          "about": "about me",
+          "experience": "experience",
+          "education": "education",
+          "projects": "projects",
+          "skills": "skills"
+        }
+      ]
+    },
+    "introduction": {
+      "items": [
+        {
+          "name": "Boris Gromov,",
+          "resume": "a frontend developer."
+        }
+      ]
+    },
+    "about": {
+      "content": "Development experience with the HTML/CSS/Javascript stack, using the Bootstrap library. Development in React/NextJS/Typescript. I strive to write understandable and maintainable code, use the BEM methodology, follow SOLID/DRY and observe uniformity in class names. I combine adaptive and flexible layout, use Flex and Grid technologies, and work with audio and video files."
+    },
+    "experience": {
+      "items": [
+        {
+          "name": "IT-Incubator",
+          "position": "Frontend developer",
+          "description": "Learning React, NextJS, Typescript, Redux, Docker, practical training."
+        },
+        {
+          "name": "RS School",
+          "position": "Frontend developer",
+          "description": "Writing multiple applications during training and practice. Implementation of slider, carousel, input forms, pop-ups and prompts, pagination, navigation, checkboxes and switches, changing interface languages."
+        },
+        {
+          "name": "InsBro",
+          "position": "Project manager",
+          "description": "Budgeting, planning, analytics. Opening and development of a network of retail insurance product sales points. Conducting tenders for legal entities. Interaction with insurance companies. Implementation of a project for the online sale of policies."
+        }
+      ]
+    },
+    "education": {
+      "items": [
+        {
+          "name": "IT-Incubator",
+          "description": "Learning React, NextJS, Typescript, Redux, Docker, GraphQL API."
+        },
+        {
+          "name": "RS School",
+          "description": "Learning HTML/CSS, Javascript, Webpack, RESTful API, Github, practical training."
+        },
+        {
+          "name": "Moscow State University of Economics, Statistics and Informatics",
+          "description": "Corporate information systems, applied informatics in economics, specialist."
+        }
+      ]
+    },
+    "skills": {
+      "personal": [
+        "Team player",
+        "Conscientious",
+        "Attentive to details",
+        "Fast learner",
+        "Reliable",
+        "Self-disciplined"
+      ],
+      "professional": [
+        "English B2",
+        "Javascript/Typescript",
+        "CSS/SCSS",
+        "Git",
+        "Figma",
+        "WebPack",
+        "React/NextJS",
+        "RESTful/GraphQL API",
+        "Redux",
+        "Docker",
+        "Jira"
+      ]
+    }
+  },
+  "Ru": {
+    "header": {
+      "items": [
+        {
+          "about": "обо мне",
+          "experience": "опыт",
+          "education": "образование",
+          "projects": "проекты",
+          "skills": "навыки"
+        }
+      ]
+    },
+    "introduction": {
+      "items": [
+        {
+          "name": "Борис Громов",
+          "resume": "фронтенд-разработчик"
+        }
+      ]
+    },
+    "about": {
+      "content": "Опыт разработки со стеком HTML/CSS/Javascript, использование библиотеки Bootstrap. Разработка в React/NextJS/Typescript. Стремлюсь к написанию понятного и поддерживаемого кода, использую методологию БЭМ, следую SOLID/DRY и соблюдаю единообразие в наименовании классов. Сочетаю адаптивную и гибкую верстку, применяю технологии Flex и Grid, работаю с аудио-и видеофайлами."
+    },
+    "experience": {
+      "items": [
+        {
+          "name": "IT-инкубатор",
+          "position": "Фронтенд-разработчик",
+          "description": "Разработка социальной сети на стеке Reaxt/NextJS/Typescript в составе команды. Интеграция системы аутентификации с использованием Google OAuth 2.0, создание компонентов отображения и редактирования профиля, стилизация."
+        },
+        {
+          "name": "RS School",
+          "position": "Фронтенд-разработчик",
+          "description": "Написание нескольких приложений в ходе обучения и практик. Реализация слайдера, карусели, форм ввода, всплывающих окон и подсказок, пагинации, навигации, чекбоксов и свитчеров, изменение языков интерфейса."
+        },
+        {
+          "name": "InsBro",
+          "position": "Менеджер проектов",
+          "description": "Бюджетирование, планирование, аналитика. Открытие и развитие сети точек продаж розничных страховых продуктов. Проведение тендеров для юридических лиц. Взаимодействие со страховыми компаниями. Реализация проекта по онлайн-продаже полисов"
+        }
+      ]
+    },
+    "education": {
+      "items": [
+        {
+          "name": "IT-инкубатор",
+          "description": "Изучение React, NextJS, Typescript, Redux, Docker, GraphQL API."
+        },
+        {
+          "name": "RS School",
+          "description": "Изучение HTML/CSS, Javascript, Webpack, RESTful API, Github, прохождение практики."
+        },
+        {
+          "name": "Московский государственный университет экономики, статистики и информатики",
+          "description": "Корпоративные информационные системы, прикладная информатика в экономике, специалист."
+        }
+      ]
+    },
+    "skills": {
+      "personal": [
+        "Командный игрок",
+        "Добросовестный",
+        "Внимательный к деталям",
+        "Быстрообучаемый",
+        "Надежный",
+        "Самодисциплинированный"
+      ],
+      "professional": [
+        "Английский B2",
+        "Javascript/Typescript",
+        "HTML/CSS/SCSS",
+        "Github",
+        "Figma",
+        "WebPack",
+        "React/NextJS",
+        "RESTful/GraphQL API",
+        "Redux",
+        "Docker",
+        "Jira"
+      ]
+    }
+  }
+}
