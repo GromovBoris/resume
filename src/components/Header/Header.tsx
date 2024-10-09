@@ -3,27 +3,27 @@ import Logo from "../../assets/images/ava_cv.png";
 import IconMenu from "../IconMenu/IconMenu";
 import TextMenu from "../TextMenu/TextMenu";
 import { fetchData } from "../../assets/service/fetchData";
+import { useLanguages } from "../../components/LanguagesContext";
+
 import "./Header.scss";
 
 const Header: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [language, setLanguage] = useState<string>("Ru");
+  const { language, setLanguage } = useLanguages();
   const [menuItems, setMenuItems] = useState<{ [key: string]: string }>({});
 
-  // отслеживание высоты хедера
   const handleScroll = () => {
     setIsCollapsed(window.scrollY > 200);
   };
 
-  // отслеживание языка и его смена
   const handleLanguageChange = () => {
-    setLanguage((prev) => (prev === "Ru" ? "En" : "Ru"));
+    const currentLanguage = language;
+    setLanguage(currentLanguage === "Ru" ? "En" : "Ru");
   };
 
   useEffect(() => {
     const loadMenuItems = async () => {
       const data = await fetchData();
-      console.log(data);
       const items = data[language]?.header?.items[0];
       if (items) {
         setMenuItems(items);
@@ -53,6 +53,7 @@ const Header: React.FC = () => {
             type="checkbox"
             id="checkbox"
             onChange={handleLanguageChange}
+            checked={language === "En"}
           />
           <span className="slider"></span>
         </label>

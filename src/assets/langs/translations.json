@@ -11,11 +11,11 @@
         }
       ]
     },
-    "introduction": {
+    "inshort": {
       "items": [
         {
-          "name": "Boris Gromov,",
-          "resume": "a frontend developer."
+          "name": "Boris Gromov",
+          "whois": "frontend developer"
         }
       ]
     },
@@ -93,11 +93,11 @@
         }
       ]
     },
-    "introduction": {
+    "inshort": {
       "items": [
         {
           "name": "Борис Громов",
-          "resume": "фронтенд-разработчик"
+          "whois": "фронтенд-разработчик"
         }
       ]
     },

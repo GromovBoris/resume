@@ -26,6 +26,7 @@ h2 {
   font-size: 20px;
   color: #999999;
   text-align: center;
+  font-weight: 500;
 }
 
 h3 {
@@ -35,4 +36,14 @@ h3 {
 h3,
 span {
   font-weight: bold;
+}
+
+section {
+  display: flex;
+  margin: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+p {
+  line-height: 1.5;
 }

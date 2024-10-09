@@ -1,13 +1,18 @@
 import React from "react";
 import Header from "../src/components/Header/Header";
+import Main from "../src/components/Main/Main";
+import { LanguagesProvider } from "./components/LanguagesContext";
 import "./App.css";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="container">
-      <Header />
-    </div>
+    <LanguagesProvider>
+      <div className="container">
+        <Header />
+        <Main />
+      </div>
+    </LanguagesProvider>
   );
-}
+};
 
 export default App;

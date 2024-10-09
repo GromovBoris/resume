@@ -17,7 +17,6 @@ import translations from "../langs/translations.json";
 
 export async function fetchData(): Promise<any> {
   try {
-    // Возвращаем данные напрямую, так как они уже загружены
     return translations;
   } catch (error) {
     console.error("Error:", error);
