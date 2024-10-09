@@ -1,0 +1,10 @@
+.experience {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0;
+
+  &__list {
+    padding-bottom: 20px;
+    margin: 0 25%;
+  }
+}

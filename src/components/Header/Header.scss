@@ -1,6 +1,9 @@
 .header {
-  display: flex;
   position: sticky;
+  top: 0;
+  z-index: 10001;
+
+  display: flex;
   justify-content: space-around;
   align-items: center;
   height: 200px;
@@ -16,8 +19,8 @@
     width: 20%;
 
     img {
-      width: 130px;
-      height: 130px;
+      width: 99px;
+      height: 99px;
       border-radius: 50%;
       box-shadow: 0 0 0 3px #fff;
       object-fit: cover;
@@ -85,7 +88,15 @@
   }
 
   &.collapsed {
-    padding: 10px;
+    height: 100px;
+
+    .header__logo {
+      img {
+        transform: scale(0);
+        box-shadow: 0 0 0 2px #fff;
+        transition: transform 0.5s ease;
+      }
+    }
 
     &__nav {
       display: flex;

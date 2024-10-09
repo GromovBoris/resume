@@ -1,17 +1,21 @@
-// Nav1.scss
-.nav1 {
+.header__nav-icon {
   display: flex;
   justify-content: space-around;
-  padding: 10px;
+  align-items: center;
+  width: 80%;
 
   a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
+    // display: inline-block;
+    transition: transform 0.3s ease;
+
+    img {
+      width: 35px;
+      height: 35px;
+      object-fit: contain;
+    }
 
     &:hover {
-      background-color: #61dafb;
-      border-radius: 5px;
+      transform: scale(1.1);
     }
   }
 }
