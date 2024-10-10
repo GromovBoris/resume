@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../src/components/Header/Header";
 import Main from "../src/components/Main/Main";
+import Footer from "./components/Footer/Footer";
 import { LanguagesProvider } from "./components/LanguagesContext";
 import "./App.css";
 
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <div className="container">
         <Header />
         <Main />
+        <Footer />
       </div>
     </LanguagesProvider>
   );

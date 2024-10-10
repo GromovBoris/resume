@@ -20,10 +20,10 @@ const Experience: React.FC = () => {
       if (items && title) {
         setExperienceItems(items);
         setTitleData(title);
+        setIsVisible(false);
         setTimeout(() => {
           setIsVisible(true);
         }, 200);
-        setIsVisible(false);
       }
     };
     loadExperienceData();
@@ -32,9 +32,24 @@ const Experience: React.FC = () => {
   return (
     <section className="experience" id="experience">
       <div className="experience__list">
-        <h2 className={isVisible ? "dissolve" : ""}>___{titleData}___</h2>
+        <h2
+          className={
+            isVisible
+              ? "experience__list-title dissolve"
+              : "experience__list-title"
+          }
+        >
+          ___{titleData}___
+        </h2>
         {experienceItems.map((item, index) => (
-          <div className="experience__list-item" key={index}>
+          <div
+            className={
+              isVisible
+                ? "experience__list-item dissolve"
+                : "experience__list-item"
+            }
+            key={index}
+          >
             <Item
               key={index}
               name={item.name}

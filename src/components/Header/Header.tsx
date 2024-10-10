@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const [menuItems, setMenuItems] = useState<{ [key: string]: string }>({});
 
   const handleScroll = () => {
-    setIsCollapsed(window.scrollY > 200);
+    setIsCollapsed(window.scrollY > 1);
   };
 
   const handleLanguageChange = () => {
