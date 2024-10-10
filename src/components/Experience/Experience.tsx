@@ -34,12 +34,14 @@ const Experience: React.FC = () => {
       <div className="experience__list">
         <h2 className={isVisible ? "dissolve" : ""}>___{titleData}___</h2>
         {experienceItems.map((item, index) => (
-          <Item
-            key={index}
-            name={item.name}
-            position={item.position}
-            description={item.description}
-          />
+          <div className="experience__list-item" key={index}>
+            <Item
+              key={index}
+              name={item.name}
+              position={item.position}
+              description={item.description}
+            />{" "}
+          </div>
         ))}
       </div>
     </section>
