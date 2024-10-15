@@ -20,10 +20,10 @@ const Education: React.FC = () => {
       if (items && title) {
         setEducationItems(items);
         setTitleData(title);
+        setIsVisible(false);
         setTimeout(() => {
           setIsVisible(true);
         }, 200);
-        setIsVisible(false);
       }
     };
     loadEducationData();
@@ -32,9 +32,23 @@ const Education: React.FC = () => {
   return (
     <section className="education" id="education">
       <div className="education__list">
-        <h2 className={isVisible ? "dissolve" : ""}>___{titleData}___</h2>
+        <h2
+          className={
+            isVisible
+              ? "education__list-title dissolve"
+              : "education__list-title"
+          }
+        >
+          ___{titleData}___
+        </h2>
         {educationItems.map((item, index) => (
-          <div className="education__list-item" key={index}>
+          <div
+            className={
+              isVisible
+                ? "education__list-item dissolve"
+                : "education__list-item"
+            }
+          >
             <Item
               key={index}
               name={item.name}

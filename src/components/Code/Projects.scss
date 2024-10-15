@@ -1,0 +1,22 @@
+.project {
+  display: flex;
+
+  &__list {
+    margin: 20px 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 0;
+  }
+
+  &__item {
+    margin: 10px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}

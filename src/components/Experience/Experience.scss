@@ -5,10 +5,11 @@
   opacity: 1;
 
   &__list {
+    width: 100%;
     padding-bottom: 20px;
     margin: 0 25%;
 
-    .experience__list-title {
+    &-title {
       opacity: 0;
 
       &.dissolve {
