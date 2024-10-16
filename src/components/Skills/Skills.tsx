@@ -43,8 +43,11 @@ const Skills: React.FC = () => {
 
   return (
     <section className="skills" id="skills">
-      <h2 className="skills__title"> ___{titleData}___</h2>
-      <div className="skills__list">
+      <h2 className={isVisible ? "skills__title dissolve" : "skills__title"}>
+        {" "}
+        ___{titleData}___
+      </h2>
+      <div className={isVisible ? "skills__list dissolve" : "skills__list"}>
         <div className="skills__list-pers">
           <h3>{titlePers}</h3>
           <ul>
