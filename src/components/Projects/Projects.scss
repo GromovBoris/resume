@@ -5,6 +5,14 @@
     margin: 20px 0;
   }
 
+  &__title {
+    opacity: 0;
+
+    &.dissolve {
+      animation: dissolve 0.5s forwards;
+    }
+  }
+
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;

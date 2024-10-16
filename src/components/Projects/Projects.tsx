@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../../assets/service/fetchData";
-import { useLanguages } from "../../components/LanguagesContext";
+import { useLanguages } from "../LanguagesContext";
 import Keyboard from "../../assets/images/keyboard.png";
 import Shelter from "../../assets/images/shelter.png";
 
@@ -29,7 +29,11 @@ const Projects: React.FC = () => {
   return (
     <section className="project" id="project">
       <div className="project__list">
-        <h2>___{titleData}___</h2>
+        <h2
+          className={isVisible ? "project__title dissolve" : "project__title"}
+        >
+          ___{titleData}___
+        </h2>
         <div className="project__wrapper">
           <a
             className="project__item"
