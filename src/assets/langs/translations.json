@@ -7,7 +7,9 @@
           "experience": "experience",
           "education": "education",
           "projects": "projects",
-          "skills": "skills"
+          "skills": "skills",
+          "personal": "personal",
+          "professional": "professional"
         }
       ]
     },
@@ -89,7 +91,9 @@
           "experience": "опыт",
           "education": "образование",
           "projects": "проекты",
-          "skills": "навыки"
+          "skills": "навыки",
+          "personal": "личные",
+          "professional": "профессиональные"
         }
       ]
     },

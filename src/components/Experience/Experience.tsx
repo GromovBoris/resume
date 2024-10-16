@@ -18,8 +18,8 @@ const Experience: React.FC = () => {
       const items = data[language]?.experience?.items;
 
       if (items && title) {
-        setExperienceItems(items);
         setTitleData(title);
+        setExperienceItems(items);
         setIsVisible(false);
         setTimeout(() => {
           setIsVisible(true);

@@ -1,51 +1,69 @@
 import React, { useState, useEffect } from "react";
 import { fetchData } from "../../assets/service/fetchData";
 import { useLanguages } from "../../components/LanguagesContext";
-import Item from "../Item/Item";
 
-import "./Experience.scss";
+import "./Skills.scss";
 
-const Experience: React.FC = () => {
+const Skills: React.FC = () => {
   const { language } = useLanguages();
   const [isVisible, setIsVisible] = useState(false);
   const [titleData, setTitleData] = useState<string>("");
-  const [experienceItems, setExperienceItems] = useState<any[]>([]);
+  const [titlePers, setTitlePers] = useState<string>("");
+  const [titleProf, setTitleProf] = useState<string>("");
+  const [persItems, setPersItems] = useState<any[]>([]);
+  const [profItems, setProfItems] = useState<any[]>([]);
 
   useEffect(() => {
     const loadExperienceData = async () => {
       const data = await fetchData();
-      const title = data[language]?.header?.items[0]?.experience;
-      const items = data[language]?.experience?.items;
+      const title = data[language]?.header?.items[0]?.skills;
+      const pers = data[language]?.header?.items[0]?.personal;
+      const prof = data[language]?.header?.items[0]?.professional;
+      const items_pers = data[language]?.skills?.personal;
+      const items_prof = data[language]?.skills?.professional;
 
-      if (items && title) {
-        setExperienceItems(items);
+      console.log(title);
+      console.log(pers);
+      console.log(prof);
+
+      if (title && pers && prof && items_pers && items_prof) {
         setTitleData(title);
+        setTitlePers(pers);
+        setTitleProf(prof);
+        setPersItems(items_pers);
+        setProfItems(items_prof);
+        setIsVisible(false);
         setTimeout(() => {
           setIsVisible(true);
         }, 200);
-        setIsVisible(false);
       }
     };
     loadExperienceData();
   }, [language]);
 
   return (
-    <section className="experience" id="experience">
-      <div className="experience__list">
-        <h2 className={isVisible ? "dissolve" : ""}>___{titleData}___</h2>
-        {experienceItems.map((item, index) => (
-          <div className="experience__list-item" key={index}>
-            <Item
-              key={index}
-              name={item.name}
-              position={item.position}
-              description={item.description}
-            />{" "}
-          </div>
-        ))}
+    <section className="skills" id="skills">
+      <h2 className="skills__title"> ___{titleData}___</h2>
+      <div className="skills__list">
+        <div className="skills__list-pers">
+          <h3>{titlePers}</h3>
+          <ul>
+            {persItems.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="skills__list-prof">
+          <h3>{titleProf}</h3>
+          <ul>
+            {profItems.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
 };
 
-export default Experience;
+export default Skills;
