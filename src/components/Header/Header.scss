@@ -1,13 +1,14 @@
+// $header-bg: url('../../assets/backgrounds/header.png');
+
 .header {
   position: sticky;
   top: 0;
   z-index: 10001;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 200px;
-  background-image: url(../../assets/backgrounds/header.png);
+  // background-image: url(../../assets/backgrounds/header.png);
   background-size: cover;
   color: white;
   transition: all 0.3s ease;
@@ -53,7 +54,7 @@
         cursor: pointer;
         width: 45px;
         height: 24px;
-        background-image: url("../../assets/icons/langs/rus.png");
+        // background-image: url("../../assets/icons/langs/rus.png");
         background-color: #999999;
         background-size: cover;
         transition: background-color 0.4s, background-image 0.4s;

@@ -18,4 +18,3 @@ const Item: React.FC<ItemProps> = ({ name, position, description }) => {
 };
 
 export default Item;
-// div className="experience__list-item"

@@ -22,14 +22,14 @@
       ]
     },
     "about": {
-      "content": "Development experience with the HTML/CSS/Javascript stack, using the Bootstrap library. Development in React/NextJS/Typescript. I strive to write understandable and maintainable code, use the BEM methodology, follow SOLID/DRY and observe uniformity in class names. I combine adaptive and flexible layout, use Flex and Grid technologies, and work with audio and video files."
+      "content": "Development experience with the HTML/CSS/Javascript stack, using the Bootstrap library. Development in React/NextJS/Typescript. I strive to write understandable and maintainable code, use the BEM methodology, follow SOLID/DRY and observe uniformity in class names. I combine adaptive and flexible layout, use Flex and Grid technologies, and work with audio and video files, input fields."
     },
     "experience": {
       "items": [
         {
           "name": "IT-Incubator",
           "position": "Frontend developer",
-          "description": "Learning React, NextJS, Typescript, Redux, Docker, practical training."
+          "description": "Development of a social network on the Reaxt/NextJS/Typescript stack as part of a team. Integration of the authentication system using Google OAuth 2.0, creation of profile display and editing components, styling."
         },
         {
           "name": "RS School",
@@ -47,11 +47,11 @@
       "items": [
         {
           "name": "IT-Incubator",
-          "description": "Learning React, NextJS, Typescript, Redux, Docker, GraphQL API."
+          "description": "Learning React and Next.js, TypeScript for code typing and security. Using Redux for application state management and Docker for containerization."
         },
         {
           "name": "RS School",
-          "description": "Learning HTML/CSS, Javascript, Webpack, RESTful API, Github, practical training."
+          "description": "Learning HTML/CSS/SCS and Javascript for adaptive layout, Webpack, interacting with API, managing projects using Github and Jira. Internship, during which several applications were implemented - Shelter, Virtual Keyboard and others."
         },
         {
           "name": "Moscow State University of Economics, Statistics and Informatics",
@@ -71,8 +71,8 @@
       "professional": [
         "English B2",
         "Javascript/Typescript",
-        "CSS/SCSS",
-        "Git",
+        "HTML/CSS/SCSS",
+        "Github",
         "Figma",
         "WebPack",
         "React/NextJS",
@@ -106,7 +106,7 @@
       ]
     },
     "about": {
-      "content": "Опыт разработки со стеком HTML/CSS/Javascript, использование библиотеки Bootstrap. Разработка в React/NextJS/Typescript. Стремлюсь к написанию понятного и поддерживаемого кода, использую методологию БЭМ, следую SOLID/DRY и соблюдаю единообразие в наименовании классов. Сочетаю адаптивную и гибкую верстку, применяю технологии Flex и Grid, работаю с аудио-и видеофайлами."
+      "content": "Опыт разработки со стеком HTML/CSS/Javascript, использование библиотеки Bootstrap. Разработка в React/NextJS/Typescript. Стремлюсь к написанию понятного и поддерживаемого кода, использую методологию БЭМ, следую SOLID/DRY и соблюдаю единообразие в наименовании классов. Сочетаю адаптивную и гибкую верстку, применяю технологии Flex и Grid, работаю с аудио-и видеофайлами, полями ввода."
     },
     "experience": {
       "items": [
@@ -131,11 +131,11 @@
       "items": [
         {
           "name": "IT-инкубатор",
-          "description": "Изучение React, NextJS, Typescript, Redux, Docker, GraphQL API."
+          "description": "Изучение React и Next.js, TypeScript для возможности типизации кода и безопасности. Использование Redux для управления состоянием приложений и Docker для контейнеризации."
         },
         {
           "name": "RS School",
-          "description": "Изучение HTML/CSS, Javascript, Webpack, RESTful API, Github, прохождение практики."
+          "description": "Изучение HTML/CSS/SCS и Javascript для адаптивной верстки, Webpack, взаимодействие с API, управление проектами с помощью Github и Jira. Прохождение практики, в ходе которой реализовано несколько приложений - Shelter, Virtual Keyboard и другие."
         },
         {
           "name": "Московский государственный университет экономики, статистики и информатики",

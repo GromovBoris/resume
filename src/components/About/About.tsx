@@ -22,7 +22,7 @@ const About: React.FC = () => {
         setIsVisible(false);
         setTimeout(() => {
           setIsVisible(true);
-        }, 200);
+        }, 100);
       }
     };
 

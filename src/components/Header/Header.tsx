@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Logo from "../../assets/images/ava_cv.png";
+import Logo from "../../assets/images/avme.png";
 import IconMenu from "../IconMenu/IconMenu";
 import TextMenu from "../TextMenu/TextMenu";
 import { fetchData } from "../../assets/service/fetchData";
 import { useLanguages } from "../../components/LanguagesContext";
+import HeaderBackground from "../../assets/backgrounds/header.png";
+import RusBackground from "../../assets/icons/langs/rus.png";
+import EngBackground from "../../assets/icons/langs/eng.png";
 
 import "./Header.scss";
 
@@ -40,7 +43,12 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <header className={isCollapsed ? "header collapsed" : "header"}>
+    <header
+      className={isCollapsed ? "header collapsed" : "header"}
+      style={{
+        backgroundImage: `url(${HeaderBackground})`,
+      }}
+    >
       <div className="header__logo">
         <img src={Logo} alt="logo" />
       </div>
@@ -55,7 +63,15 @@ const Header: React.FC = () => {
             onChange={handleLanguageChange}
             checked={language === "En"}
           />
-          <span className="slider"></span>
+          <span
+            className="slider"
+            style={{
+              backgroundImage:
+                language === "En"
+                  ? `url(${EngBackground})`
+                  : `url(${RusBackground})`,
+            }}
+          ></span>
         </label>
       </div>
     </header>

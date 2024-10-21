@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
         setIsVisible(false);
         setTimeout(() => {
           setIsVisible(true);
-        }, 200);
+        }, 100);
       }
     };
     loadProjectsData();

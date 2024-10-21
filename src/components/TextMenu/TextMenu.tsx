@@ -13,7 +13,7 @@ const TextMenu: React.FC<TextMenuProps> = ({ menuItems }) => {
     setIsVisible(false);
     const timeout = setTimeout(() => {
       setIsVisible(true);
-    }, 200);
+    }, 100);
 
     return () => clearTimeout(timeout);
   }, [menuItems]);

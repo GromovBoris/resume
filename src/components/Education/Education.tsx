@@ -23,7 +23,7 @@ const Education: React.FC = () => {
         setIsVisible(false);
         setTimeout(() => {
           setIsVisible(true);
-        }, 200);
+        }, 100);
       }
     };
     loadEducationData();

@@ -35,7 +35,7 @@ const Skills: React.FC = () => {
         setIsVisible(false);
         setTimeout(() => {
           setIsVisible(true);
-        }, 200);
+        }, 100);
       }
     };
     loadExperienceData();
