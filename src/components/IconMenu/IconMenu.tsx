@@ -9,20 +9,20 @@ import "./IconMenu.scss";
 const IconMenu = () => {
   return (
     <div className="header__nav-icon">
-      <a href="/home" aria-label="Home">
-        <img src={AboutIcon} alt="Home" />
+      <a href="#about" aria-label="about">
+        <img src={AboutIcon} alt="about" />
       </a>
-      <a href="/about" aria-label="About">
-        <img src={ExperienceIcon} alt="About" />
+      <a href="#experience" aria-label="experience">
+        <img src={ExperienceIcon} alt="experience" />
       </a>
-      <a href="/contact" aria-label="Contact">
-        <img src={EducationIcon} alt="Contact" />
+      <a href="#education" aria-label="education">
+        <img src={EducationIcon} alt="education" />
       </a>
-      <a href="/contact" aria-label="Contact">
-        <img src={CodeIcon} alt="Contact" />
+      <a href="#project" aria-label="project">
+        <img src={CodeIcon} alt="project" />
       </a>
-      <a href="/contact" aria-label="Contact">
-        <img src={SkillsIcon} alt="Contact" />
+      <a href="#skills" aria-label="skills">
+        <img src={SkillsIcon} alt="skills" />
       </a>
     </div>
   );

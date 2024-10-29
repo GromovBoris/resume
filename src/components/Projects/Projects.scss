@@ -1,5 +1,6 @@
 .project {
   display: flex;
+  justify-content: center;
 
   &__list {
     margin: 20px 0;
@@ -7,6 +8,7 @@
 
   &__title {
     opacity: 0;
+    margin-bottom: 15px;
 
     &.dissolve {
       animation: dissolve 0.5s forwards;
@@ -14,13 +16,27 @@
   }
 
   &__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     margin: 10px 0;
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
     margin: 10px;
+    flex: 1;
+
+    @media (max-width: 900px) {
+      max-width: 700px;
+      max-height: 100%;
+      margin: 20px 50px;
+    }
+
+    @media (max-width: 400px) {
+      margin: 20px 20px;
+    }
 
     img {
       max-width: 100%;

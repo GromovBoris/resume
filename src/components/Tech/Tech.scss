@@ -1,13 +1,25 @@
 .tech {
   display: flex;
   align-items: center;
-  padding: 20px;
+  margin: 0 30px;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+  }
 
   &__links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     list-style-type: none;
     width: 20%;
+    margin-left: 30px;
+
+    @media (max-width: 700px) {
+      order: 2;
+      margin: 30px 0;
+    }
 
     & .tech__button {
       margin: 0 15px;
@@ -28,6 +40,15 @@
     margin: 0 8%;
     padding: 50px 0;
     opacity: 1;
+
+    @media (max-width: 1050px) {
+      align-items: center;
+    }
+
+    @media (max-width: 700px) {
+      order: 1;
+      padding: 0;
+    }
 
     h1 {
       font-weight: 500;
@@ -50,9 +71,15 @@
 
   &__calls {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     list-style-type: none;
     width: 20%;
+    margin-right: 30px;
+
+    @media (max-width: 700px) {
+      order: 3;
+      margin: 0;
+    }
 
     & .tech__button {
       margin: 0 15px;

@@ -21,35 +21,35 @@ const TextMenu: React.FC<TextMenuProps> = ({ menuItems }) => {
   return (
     <div className="header__nav-text">
       <a
-        href="/about"
+        href="#about"
         aria-label="About"
         className={isVisible ? "dissolve" : ""}
       >
         {menuItems.about}
       </a>
       <a
-        href="/experience"
+        href="#experience"
         aria-label="Experience"
         className={isVisible ? "dissolve" : ""}
       >
         {menuItems.experience}
       </a>
       <a
-        href="/education"
+        href="#education"
         aria-label="Education"
         className={isVisible ? "dissolve" : ""}
       >
         {menuItems.education}
       </a>
       <a
-        href="/projects"
+        href="#project"
         aria-label="Projects"
         className={isVisible ? "dissolve" : ""}
       >
         {menuItems.projects}
       </a>
       <a
-        href="/skills"
+        href="#skills"
         aria-label="Skills"
         className={isVisible ? "dissolve" : ""}
       >

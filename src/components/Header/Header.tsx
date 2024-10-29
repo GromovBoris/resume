@@ -12,6 +12,7 @@ import "./Header.scss";
 
 const Header: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 1120);
   const { language, setLanguage } = useLanguages();
   const [menuItems, setMenuItems] = useState<{ [key: string]: string }>({});
 
@@ -19,10 +20,21 @@ const Header: React.FC = () => {
     setIsCollapsed(window.scrollY > 1);
   };
 
+  const handleResize = () => {
+    setIsMobileView(window.innerWidth < 1120);
+  };
+
   const handleLanguageChange = () => {
     const currentLanguage = language;
     setLanguage(currentLanguage === "Ru" ? "En" : "Ru");
   };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const loadMenuItems = async () => {
@@ -53,7 +65,11 @@ const Header: React.FC = () => {
         <img src={Logo} alt="logo" />
       </div>
       <nav className="header__nav">
-        {isCollapsed ? <IconMenu /> : <TextMenu menuItems={menuItems} />}
+        {isCollapsed || isMobileView ? (
+          <IconMenu />
+        ) : (
+          <TextMenu menuItems={menuItems} />
+        )}
       </nav>
       <div className="header__lang">
         <label className="header__lang-toggle">

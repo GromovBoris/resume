@@ -37,7 +37,11 @@ const Tech: React.FC = () => {
     <section className="tech">
       <ul className="tech__links">
         <li className="tech__button">
-          <a href="../../assets/docs/boris_gromov_resume.docx" download>
+          <a
+            href="https://drive.google.com/file/d/1XmH0BGXMZPW5HOxtLrJW_yeOl1CvYBog/view?usp=sharing"
+            download
+            target="_blank"
+          >
             <img src={Print} alt="message" />
           </a>
         </li>

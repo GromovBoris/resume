@@ -9,6 +9,13 @@
     padding-bottom: 20px;
     margin: 0 25%;
 
+    @media (max-width: 900px) {
+      margin: 0 15%;
+    }
+    @media (max-width: 400px) {
+      margin: 0 10%;
+    }
+
     &-title {
       opacity: 0;
 

@@ -30,7 +30,7 @@ const About: React.FC = () => {
   }, [language]);
 
   return (
-    <section className="about">
+    <section className="about" id="about">
       <h2 className={isVisible ? "dissolve" : ""}>___{headerData}___</h2>
       <p className={isVisible ? "dissolve" : ""}>{introData}</p>
     </section>

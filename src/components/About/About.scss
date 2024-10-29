@@ -7,6 +7,7 @@
 
   h2 {
     opacity: 0;
+    margin-bottom: 15px;
 
     &.dissolve {
       animation: dissolve 0.5s forwards;
@@ -18,6 +19,13 @@
     padding-top: 10px;
     margin: 0 25%;
     opacity: 0;
+
+    @media (max-width: 900px) {
+      margin: 0 15%;
+    }
+    @media (max-width: 400px) {
+      margin: 0 10%;
+    }
 
     &.dissolve {
       animation: dissolve 0.5s forwards;

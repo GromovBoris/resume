@@ -34,6 +34,18 @@ module.exports = {
         test: /.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /.doc$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "documents/",
+            },
+          },
+        ],
+      },
     ],
   },
   devtool: "inline-source-map",
