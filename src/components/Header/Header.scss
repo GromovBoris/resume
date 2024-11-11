@@ -23,6 +23,10 @@
       box-shadow: 0 0 0 3px #fff;
       object-fit: cover;
     }
+
+    @media (max-width: 700px) {
+      display: none;
+    }
   }
 
   &__nav {
@@ -152,21 +156,6 @@
           transform: translateX(26px);
         }
       }
-    }
-  }
-
-  @media (max-width: 700px) {
-    &__logo {
-      display: none;
-      order: 2;
-    }
-
-    &__lang {
-      order: 1;
-    }
-
-    &__nav {
-      order: 3;
     }
   }
 }

@@ -7,12 +7,14 @@ import { useLanguages } from "../../components/LanguagesContext";
 import HeaderBackground from "../../assets/backgrounds/header.png";
 import RusBackground from "../../assets/icons/langs/rus.png";
 import EngBackground from "../../assets/icons/langs/eng.png";
+import Burger from "../Burger/Burger";
 
 import "./Header.scss";
 
 const Header: React.FC = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 1120);
+  const [isPadView, setIsPadView] = useState(window.innerWidth < 1120);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 700);
   const { language, setLanguage } = useLanguages();
   const [menuItems, setMenuItems] = useState<{ [key: string]: string }>({});
 
@@ -21,7 +23,8 @@ const Header: React.FC = () => {
   };
 
   const handleResize = () => {
-    setIsMobileView(window.innerWidth < 1120);
+    setIsPadView(window.innerWidth < 1120);
+    setIsMobileView(window.innerWidth < 700);
   };
 
   const handleLanguageChange = () => {
@@ -37,6 +40,13 @@ const Header: React.FC = () => {
   }, []);
 
   useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     const loadMenuItems = async () => {
       const data = await fetchData();
       const items = data[language]?.header?.items[0];
@@ -46,13 +56,6 @@ const Header: React.FC = () => {
     };
     loadMenuItems();
   }, [language]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <header
@@ -64,13 +67,15 @@ const Header: React.FC = () => {
       <div className="header__logo">
         <img src={Logo} alt="logo" />
       </div>
-      <nav className="header__nav">
-        {isCollapsed || isMobileView ? (
-          <IconMenu />
-        ) : (
-          <TextMenu menuItems={menuItems} />
-        )}
-      </nav>
+      {!isMobileView && (
+        <nav className="header__nav">
+          {isCollapsed || isPadView ? (
+            <IconMenu />
+          ) : (
+            <TextMenu menuItems={menuItems} />
+          )}
+        </nav>
+      )}
       <div className="header__lang">
         <label className="header__lang-toggle">
           <input
@@ -89,7 +94,8 @@ const Header: React.FC = () => {
             }}
           ></span>
         </label>
-      </div>
+      </div>{" "}
+      {isMobileView && <Burger />}
     </header>
   );
 };
