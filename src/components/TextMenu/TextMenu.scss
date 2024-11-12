@@ -34,11 +34,11 @@
       animation: dissolve 0.5s forwards;
     }
   }
-
-  // .header__burger & {
-  //   flex-direction: column;
-  // }
 }
+
+// .header__nav.mobile .header__nav-text {
+//   flex-direction: column;
+// }
 
 @keyframes dissolve {
   from {

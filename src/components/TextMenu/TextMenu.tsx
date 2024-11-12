@@ -4,9 +4,10 @@ import "./TextMenu.scss";
 
 interface TextMenuProps {
   menuItems: { [key: string]: string };
+  onMenuItemClick: () => void;
 }
 
-const TextMenu: React.FC<TextMenuProps> = ({ menuItems }) => {
+const TextMenu: React.FC<TextMenuProps> = ({ menuItems, onMenuItemClick }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const TextMenu: React.FC<TextMenuProps> = ({ menuItems }) => {
   return (
     <div className="header__nav-text">
       <a
+        onClick={onMenuItemClick}
         href="#about"
         aria-label="About"
         className={isVisible ? "dissolve" : ""}
@@ -28,6 +30,7 @@ const TextMenu: React.FC<TextMenuProps> = ({ menuItems }) => {
         {menuItems.about}
       </a>
       <a
+        onClick={onMenuItemClick}
         href="#experience"
         aria-label="Experience"
         className={isVisible ? "dissolve" : ""}
@@ -35,6 +38,7 @@ const TextMenu: React.FC<TextMenuProps> = ({ menuItems }) => {
         {menuItems.experience}
       </a>
       <a
+        onClick={onMenuItemClick}
         href="#education"
         aria-label="Education"
         className={isVisible ? "dissolve" : ""}
@@ -42,6 +46,7 @@ const TextMenu: React.FC<TextMenuProps> = ({ menuItems }) => {
         {menuItems.education}
       </a>
       <a
+        onClick={onMenuItemClick}
         href="#project"
         aria-label="Projects"
         className={isVisible ? "dissolve" : ""}
@@ -49,6 +54,7 @@ const TextMenu: React.FC<TextMenuProps> = ({ menuItems }) => {
         {menuItems.projects}
       </a>
       <a
+        onClick={onMenuItemClick}
         href="#skills"
         aria-label="Skills"
         className={isVisible ? "dissolve" : ""}

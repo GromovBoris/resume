@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-
 import "./Burger.scss";
 
-const Burger: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface BurgerProps {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+const Burger: React.FC<BurgerProps> = ({ isOpen, toggleMenu }) => {
   return (
     <div
       className={isOpen ? "header__burger open" : "header__burger"}

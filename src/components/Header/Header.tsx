@@ -5,6 +5,7 @@ import TextMenu from "../TextMenu/TextMenu";
 import { fetchData } from "../../assets/service/fetchData";
 import { useLanguages } from "../../components/LanguagesContext";
 import HeaderBackground from "../../assets/backgrounds/header.png";
+import BurgerBackground from "../../assets/backgrounds/burger.png";
 import RusBackground from "../../assets/icons/langs/rus.png";
 import EngBackground from "../../assets/icons/langs/eng.png";
 import Burger from "../Burger/Burger";
@@ -17,6 +18,7 @@ const Header: React.FC = () => {
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 700);
   const { language, setLanguage } = useLanguages();
   const [menuItems, setMenuItems] = useState<{ [key: string]: string }>({});
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   const handleScroll = () => {
     setIsCollapsed(window.scrollY > 1);
@@ -30,6 +32,14 @@ const Header: React.FC = () => {
   const handleLanguageChange = () => {
     const currentLanguage = language;
     setLanguage(currentLanguage === "Ru" ? "En" : "Ru");
+  };
+
+  const toggleBurgerMenu = () => {
+    setIsBurgerOpen(!isBurgerOpen);
+  };
+
+  const handleMenuItemClick = () => {
+    setIsBurgerOpen(false);
   };
 
   useEffect(() => {
@@ -72,7 +82,10 @@ const Header: React.FC = () => {
           {isCollapsed || isPadView ? (
             <IconMenu />
           ) : (
-            <TextMenu menuItems={menuItems} />
+            <TextMenu
+              menuItems={menuItems}
+              onMenuItemClick={handleMenuItemClick}
+            />
           )}
         </nav>
       )}
@@ -95,7 +108,25 @@ const Header: React.FC = () => {
           ></span>
         </label>
       </div>{" "}
-      {isMobileView && <Burger />}
+      {isMobileView && (
+        <Burger isOpen={isBurgerOpen} toggleMenu={toggleBurgerMenu} />
+      )}
+      {isMobileView && isBurgerOpen && (
+        <nav
+          className="header__nav mobile"
+          style={{
+            backgroundPosition: `center`,
+            backgroundSize: `cover`,
+            backgroundRepeat: `no-repeat`,
+            backgroundImage: `url(${BurgerBackground})`,
+          }}
+        >
+          <TextMenu
+            menuItems={menuItems}
+            onMenuItemClick={handleMenuItemClick}
+          />
+        </nav>
+      )}
     </header>
   );
 };
