@@ -3,6 +3,7 @@ import { fetchData } from "../../assets/service/fetchData";
 import { useLanguages } from "../LanguagesContext";
 import Keyboard from "../../assets/images/keyboard.png";
 import Shelter from "../../assets/images/shelter.png";
+import Sidebar from "../../assets/images/sidebar.png";
 
 import "./Projects.scss";
 
@@ -51,6 +52,15 @@ const Projects: React.FC = () => {
             rel="noopener noreferrer"
           >
             <img src={Shelter} alt="shelter" />
+          </a>
+
+          <a
+            className="project__item"
+            href="https://gromovboris.github.io/sidebar/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src={Sidebar} alt="sidebar" />
           </a>
         </div>
       </div>
